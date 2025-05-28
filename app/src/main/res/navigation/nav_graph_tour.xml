@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TourDetailFragment">
+
+    <fragment
+        android:id="@+id/TourDetailFragment"
+        android:name="curtis.com.taichungtravel.navigation.tour.detialpage.TourDetailFragment"
+        android:label="@string/tour_detail_fragment_label"
+        tools:layout="@layout/fragment_tour_detail">
+
+        <action
+            android:id="@+id/action_TourFragment_to_WebsiteFragment"
+            app:destination="@id/TourWebFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TourWebFragment"
+        android:name="curtis.com.taichungtravel.navigation.tour.detialpage.TourWebsiteFragment"
+        android:label="@string/tour_website_fragment_label"
+        tools:layout="@layout/fragment_tour_website">
+<!--
+        <action
+            android:id="@+id/action_TourWebFragment_to_TourFragment"
+            app:destination="@id/TourDetailFragment" />-->
+    </fragment>
+</navigation>

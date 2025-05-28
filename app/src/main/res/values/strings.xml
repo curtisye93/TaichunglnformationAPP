@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Taichung Travel</string>
+    <string name="title_flower">Flower</string>
+    <string name="title_tour">Tour</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="tour_detail_fragment_label">Tour Information</string>
+    <string name="tour_website_fragment_label">Website</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        The bikeway is located at the west coast whicht connects Dajia and Daan District.
+        The recreational  coastal view and the ecology of wetland make it a perfect eductioual attraction for families.
+    </string>
+</resources>
