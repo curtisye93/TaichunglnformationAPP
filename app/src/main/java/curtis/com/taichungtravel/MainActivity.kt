@@ -2,7 +2,11 @@ package curtis.com.taichungtravel
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Spinner
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.coroutineScope
@@ -16,17 +20,16 @@ import kotlinx.coroutines.launch
 import curtis.com.taichungtravel.data.DataTourist
 import curtis.com.taichungtravel.api.ApiConnector
 import curtis.com.taichungtravel.api.InterfaceApiConnector
-import curtis.com.taichungtravel.data.DataFlower
-import curtis.com.taichungtravel.navigation.tour.Setting
-import kotlinx.coroutines.delay
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     companion object{
-        lateinit var buttonLanguage: Button
+        lateinit var buttonLanguage : Button
+        lateinit var spinnerFlower : Spinner
+        lateinit var flowerType : ArrayList<String>
     }
-
+    //lateinit var spinnerFlower : Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +56,22 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide() //hide top action bar
 
         buttonLanguage = findViewById<Button>(R.id.button_language)
+        spinnerFlower = findViewById<Spinner>(R.id.spinner_flower_search)
+
+
+        flowerType = arrayListOf("ALL", "落羽松", "櫻花", "鬱金香", "荷花", "百合花", "向日葵", "波斯菊", "玻斯菊", "梅花", "桐花", "楓葉", "木棉花", "阿勃勒", "鳳凰花", "紫藤花", "魯冰花", "薰衣草", "繡球花", "黃金風鈴木", "金針花", "白雪木", "臺灣欒樹", "風鈴木", "洋紅風鈴木", "苦楝", "藍花楹", "芒草", "流蘇", "九重葛", "美人樹", "稻穗")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, flowerType)
+        spinnerFlower.adapter = adapter
+        /*
+        spinnerFlower.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
+                Log.d("MainActivity", "flowerType[pos] : " + flowerType[pos])
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+
+            }
+        }*/
 
     }
 

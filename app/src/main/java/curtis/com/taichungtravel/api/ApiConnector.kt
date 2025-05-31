@@ -12,6 +12,7 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 /*
+* Copyright 2025 Curtis.
 * use okhttp connect api
 */
 

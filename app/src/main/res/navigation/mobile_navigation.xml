@@ -5,6 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_flower">
 
+
     <fragment
         android:id="@+id/navigation_flower"
         android:name="curtis.com.taichungtravel.navigation.flower.FlowerFragment"
@@ -15,11 +16,4 @@
         android:name="curtis.com.taichungtravel.navigation.tour.TourFragment"
         tools:layout="@layout/fragment_tour" />
 
-    <!--
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="curtis.com.taichungtravel.navigation.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-        -->
 </navigation>

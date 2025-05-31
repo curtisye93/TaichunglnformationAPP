@@ -15,7 +15,18 @@ class DataFlower (result: String){
          * A map of (placeholder) items, by ID.
          */
         val item: MutableList<DataFlowerStruct> = ArrayList()
+        var itemSearch: MutableList<DataFlowerStruct> = ArrayList()
         //val itemMap: MutableMap<String, DataTourStruct> = HashMap()
+
+
+        fun SetOnSearchFlower(flower : String){
+            itemSearch.clear()
+            for (i in 0 until dataSize) {
+                if(item[i].flowerType == flower){
+                    itemSearch.add(item[i])
+                }
+            }
+        }
     }
 
     init {
@@ -51,5 +62,7 @@ class DataFlower (result: String){
             jsonObject.get("觀賞時期").toString()
         )
     }
+
+
 
 }

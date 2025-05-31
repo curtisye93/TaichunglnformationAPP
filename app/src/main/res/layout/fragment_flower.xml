@@ -9,8 +9,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_flower_fragment"
         android:name="curtis.com.taichungtravel.navigation.flower.FlowerFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/fragment_flower" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--tools:listitem="@layout/fragment_flower"-->
 </androidx.constraintlayout.widget.ConstraintLayout>

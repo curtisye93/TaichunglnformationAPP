@@ -1,5 +1,6 @@
 package curtis.com.taichungtravel.navigation.tour
 /*
+   Copyright 2025 Curtis.
    Global variable , setting use
  */
 class Setting {
